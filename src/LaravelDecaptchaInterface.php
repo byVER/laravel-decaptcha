@@ -1,8 +1,8 @@
 <?php
 
-namespace jumper423;
+namespace insign\LaravelDecaptcha;
 
-interface CaptchaInterface
+interface LaravelDecaptchaInterface
 {
     public function run($filename);
 
