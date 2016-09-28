@@ -27,7 +27,7 @@
             "email": "insign+laravel-decaptcha@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+  "minimum-stability": "stable",
     "require": {
         "php": ">=5.5.0"
     },
