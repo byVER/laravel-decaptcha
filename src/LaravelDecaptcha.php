@@ -2,6 +2,8 @@
 
 namespace insign\LaravelDecaptcha;
 
+use Illuminate\Contracts\Foundation\Application;
+
 /**
  * Class to recognize captcha
  *
@@ -103,13 +105,16 @@ class LaravelDecaptcha implements LaravelDecaptchaInterface
    private $captcha_id;
 
    /**
-    * LaravelDecaptcha Constructor
+    * Class constructor.
     *
-    * @internal string $app
+    * @param \Illuminate\Contracts\Foundation\Application $app The Laravel Application.
     */
-   public function __construct()
+   public function __construct(Application $app)
    {
+      $this->app = $app;
 
+      $this->apiKey = config('decaptcha.key');
+      $this->domain = config('decaptcha.domain');
    }
 
    public function setApiKey($apiKey)

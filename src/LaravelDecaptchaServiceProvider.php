@@ -6,36 +6,50 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelDecaptchaServiceProvider extends ServiceProvider
 {
+   /**
+    * Indicates if loading of the provider is deferred.
+    *
+    * @var bool
+    */
+   protected $defer = TRUE;
 
    /**
-    * Bootstrap the application services.
-    *
-    * @return void
+    * Bootstrap the application events.
     */
    public function boot()
    {
-      //
+      $config_file = __DIR__ . '/../config/decaptcha.php';
+      if ($this->isLumen()) {
+         $this->app->configure('decaptcha');
+      } else {
+         $this->publishes([ $config_file => config_path('decaptcha.php') ]);
+      }
+      $this->mergeConfigFrom($config_file, 'decaptcha');
    }
 
    /**
-    * Register the application services.
-    *
-    * @return void
+    * Register the service provider.
     */
    public function register()
    {
-      $this->registerLaravelDecaptcha();
+      $this->app->singleton('decaptcha', LaravelDecaptcha::class);
    }
 
    /**
-    * Registers Facade
+    * Get the services provided by the provider.
     *
-    * @return LaravelDecaptcha
+    * @return array
     */
-   private function registerLaravelDecaptcha()
+   public function provides()
    {
-      $this->app->bind('LD', function ($app) {
-         return new LaravelDecaptcha($app);
-      });
+      return [ 'decaptcha' ];
+   }
+
+   /**
+    * @return bool
+    */
+   private function isLumen()
+   {
+      return TRUE === str_contains($this->app->version(), 'Lumen');
    }
 }

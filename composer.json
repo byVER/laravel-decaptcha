@@ -29,7 +29,9 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": ">=5.5.0"
+    "php": ">=5.5.9",
+    "illuminate/config": "~5.1 || ~5.2 || ~5.3",
+    "illuminate/support": "~5.1 || ~5.2 || ~5.3"
   },
   "autoload": {
     "classmap": [
