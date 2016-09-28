@@ -1,23 +1,47 @@
 {
-  "name": "jumper423/yii2-captcha",
-  "description": "Распознавание капч для всех популярных сервисов rucaptcha.com, 2captcha.com, pixodrom.com, captcha24.com, socialink.ru, anti-captcha.com",
-  "keywords": ["yii2", "captcha", "recognition", "rucaptcha.com", "2captcha.com", "pixodrom.com", "captcha24.com", "socialink.ru", "rucaptcha", "2captcha", "pixodrom", "captcha24", "socialink", "anti-captcha.com", "anti-captcha"],
-  "homepage": "http://infoblog1.ru/learn/cms/yii/raspoznavanie-kapch-na-yii2",
-  "type": "project",
-  "license": "Apache License 2.0",
-  "support": {
-    "issues": "https://github.com/jumper423/yii2-captcha/issues?state=open",
-    "source": "https://github.com/jumper423/yii2-captcha"
-  },
-  "minimum-stability": "stable",
-  "require": {
-    "php": ">=5.4.0",
-    "yiisoft/yii2": "*"
-  },
-  "config": {
-    "process-timeout": 1800
-  },
-  "autoload": {
-    "psr-4": {"jumper423\\": ""}
-  }
+    "name": "insign/laravel-decaptcha",
+    "description": "A Laravel package for captcha recognition for popular services like rucaptcha.com, 2captcha.com, pixodrom.com, captcha24.com, socialink.ru, anti-captcha.com",
+    "keywords": [
+        "curl",
+        "php",
+        "laravel",
+        "captcha",
+        "recognition",
+        "rucaptcha.com",
+        "2captcha.com",
+        "pixodrom.com",
+        "captcha24.com",
+        "socialink.ru",
+        "rucaptcha",
+        "2captcha",
+        "pixodrom",
+        "captcha24",
+        "socialink",
+        "anti-captcha.com",
+        "anti-captcha"
+    ],
+    "type": "project",
+    "authors": [
+        {
+            "name": "Hélio Araújo de Oliveira",
+            "email": "insign+laravel-decaptcha@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "insign\\laravel_decaptcha\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/insign/laravel-decaptcha/issues?state=open",
+        "source": "https://github.com/insign/laravel-decaptcha"
+    }
 }
