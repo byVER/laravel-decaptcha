@@ -16,6 +16,6 @@ class LaravelDecaptchaFacade extends Facade
     */
    protected static function getFacadeAccessor()
    {
-      return 'decaptcha';
+      return 'Decaptcha';
    }
 }

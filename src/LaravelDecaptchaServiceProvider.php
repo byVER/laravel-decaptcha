@@ -20,7 +20,7 @@ class LaravelDecaptchaServiceProvider extends ServiceProvider
    {
       $config_file = __DIR__ . '/../config/decaptcha.php';
       if ($this->isLumen()) {
-         $this->app->configure('decaptcha');
+         $this->app->configure('Decaptcha');
       } else {
          $this->publishes([ $config_file => config_path('decaptcha.php') ]);
       }
@@ -32,7 +32,7 @@ class LaravelDecaptchaServiceProvider extends ServiceProvider
     */
    public function register()
    {
-      $this->app->singleton('decaptcha', LaravelDecaptcha::class);
+      $this->app->singleton('Decaptcha', LaravelDecaptcha::class);
    }
 
    /**
@@ -42,7 +42,7 @@ class LaravelDecaptchaServiceProvider extends ServiceProvider
     */
    public function provides()
    {
-      return [ 'decaptcha' ];
+      return [ 'Decaptcha' ];
    }
 
    /**
