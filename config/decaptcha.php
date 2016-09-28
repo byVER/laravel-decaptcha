@@ -10,4 +10,9 @@ return [
    | Service which will load the captcha
    */
    'domain' => env('DECAPTCHA_DOMAIN', '2captcha.com'),
+
+   /*
+   | The folder inside storage folder that the script should save images got by reference
+   */
+   'tmp'    => env('DECAPTCHA_TMP', 'captcha'),
 ];

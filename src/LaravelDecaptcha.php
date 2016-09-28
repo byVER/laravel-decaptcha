@@ -114,7 +114,8 @@ class LaravelDecaptcha implements LaravelDecaptchaInterface
       $this->app = $app;
 
       $this->apiKey = config('decaptcha.key');
-      $this->domain = config('decaptcha.domain');
+      $this->domain = config('decaptcha.domain', $this->domain);
+      $this->pathTmp = config('decaptcha.tmp', $this->pathTmp);
    }
 
    public function setApiKey($apiKey)
