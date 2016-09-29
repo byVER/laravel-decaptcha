@@ -8,8 +8,6 @@ Features
 * Easy setup
 * Accept the file path or by reference
 
-
-
 Installation
 ------------
 The preferred way to install this extension through [composer] (http://getcomposer.org/download/). Start by adding the package to require your composer.json
@@ -39,7 +37,6 @@ Just update your `config/app.php` file adding the following code at the end of y
     
 ],
 ```
-
 
 #### Lumen
 Go to `/bootstrap/app.php` file and add this line:
