@@ -52,7 +52,7 @@ class LaravelDecaptcha implements LaravelDecaptchaInterface
     */
    public $isRegSense = 0;
    /**
-    * 0 OR 1 OR 2 OR 3 - 0 = option is not enabled (default) 1 = captcha is only numbers 2 = captcha is only numbers 3 = Captcha consists either only of numbers or only of letters.
+    * 0 OR 1 OR 2 OR 3 - 0 = option is not enabled (default) 1 = captcha is only numbers 2 = captcha is only letters 3 = Captcha consists either only of numbers or only of letters.
     * @var int
     */
    public $isNumeric = 0;
