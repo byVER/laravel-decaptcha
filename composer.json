@@ -30,8 +30,8 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.5.9",
-    "illuminate/config": "*",
-    "illuminate/support": "*"
+    "illuminate/config": "~8",
+    "illuminate/support": "~8"
   },
   "autoload": {
     "classmap": [
