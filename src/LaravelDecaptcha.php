@@ -3,7 +3,7 @@
 namespace insign\LaravelDecaptcha;
 
 use Illuminate\Contracts\Foundation\Application;
-
+use Illuminate\Support\Str;
 /**
  * Class to recognize captcha
  *
@@ -140,7 +140,7 @@ class LaravelDecaptcha implements LaravelDecaptchaInterface
          if (strpos($filename, 'http://') !== FALSE || strpos($filename, 'https://') !== FALSE) {
             $current = file_get_contents($filename);
             if ($current) {
-               $path = storage_path($this->pathTmp) . '/' . str_random();
+               $path = storage_path($this->pathTmp) . '/' . Str::random();
                if (file_put_contents($path, $current)) {
                   $filename = $path;
                } else {
